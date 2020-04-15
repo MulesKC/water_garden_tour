@@ -1,6 +1,6 @@
--- MySQL dump 10.13  Distrib 8.0.19, for macos10.15 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.19, for Win64 (x86_64)
 --
--- Host: localhost    Database: Water_Garden
+-- Host: localhost    Database: water_garden
 -- ------------------------------------------------------
 -- Server version	8.0.19
 
@@ -16,30 +16,27 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `features`
+-- Table structure for table `feature`
 --
 
-DROP TABLE IF EXISTS `features`;
+DROP TABLE IF EXISTS `feature`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `features` (
-  `features_id` int NOT NULL AUTO_INCREMENT,
-  `pond` tinyint DEFAULT NULL,
-  `waterfall` tinyint DEFAULT NULL,
-  `railroad` tinyint DEFAULT NULL,
-  `accessible` tinyint DEFAULT NULL,
-  PRIMARY KEY (`features_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+CREATE TABLE `feature` (
+  `feature_id` int NOT NULL AUTO_INCREMENT,
+  `feature_name` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`feature_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `features`
+-- Dumping data for table `feature`
 --
 
-LOCK TABLES `features` WRITE;
-/*!40000 ALTER TABLE `features` DISABLE KEYS */;
-INSERT INTO `features` VALUES (9,1,0,0,1),(10,0,0,1,0);
-/*!40000 ALTER TABLE `features` ENABLE KEYS */;
+LOCK TABLES `feature` WRITE;
+/*!40000 ALTER TABLE `feature` DISABLE KEYS */;
+INSERT INTO `feature` VALUES (9,'pond'),(10,'waterfall'),(11,'railroad'),(12,'accessible');
+/*!40000 ALTER TABLE `feature` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -51,4 +48,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-04-13 15:07:00
+-- Dump completed on 2020-04-15 16:11:09
